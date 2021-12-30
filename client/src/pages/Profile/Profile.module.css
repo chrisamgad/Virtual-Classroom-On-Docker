@@ -1,0 +1,33 @@
+.heading{
+    font-size: 26px;
+    font-weight: 300;
+    color: #000000;
+    width: 10.5%;
+    margin-left: 37px;
+    margin-bottom: 13px;
+    margin-top: 15px;
+}
+
+.bodyContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pieceofinfo{
+    font-size: 19px;
+    margin: 10px;
+    color:#0088ff;
+}
+
+.key{
+    font-weight: 400;
+    color:#373535;
+}
+
+.profilepicture{
+    border-radius: 5px;
+    border: 2px solid #ffffff;
+    margin-bottom: 15px;
+
+}

@@ -1,0 +1,20 @@
+.form_container{
+    padding-top:70px !important;
+    padding-bottom: 70px !important;
+    display:flex;
+    background: #c4d3ce4d;
+    justify-content:center;
+    border-radius: 15px;
+    
+}
+
+.form_styles{
+    padding:40px 40px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    border: 1px solid gray;
+}
+
+.alertStyle{
+    padding: 10px 1rem !important;
+}

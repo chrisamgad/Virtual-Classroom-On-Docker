@@ -1,0 +1,806 @@
+{
+	"info": {
+		"_postman_id": "7ba90e2e-d480-4c6c-9b76-db5ad3394b75",
+		"name": "Virtual Classroom",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Teachers",
+			"item": [
+				{
+					"name": "Assignment",
+					"item": [
+						{
+							"name": "Create new Assignment",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "ASSS3",
+											"type": "text"
+										},
+										{
+											"key": "duedate",
+											"value": "2021-06-10, 11:59 PM GMT+0000",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Ass 3",
+											"type": "text"
+										},
+										{
+											"key": "myFile",
+											"type": "file",
+											"src": "/C:/Users/chris/Desktop/Node-Course/2.1 PDF-Guide-Node-Andrew-Mead-v3.pdf"
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/teacher/:courseid/createassignment",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"teacher",
+										":courseid",
+										"createassignment"
+									],
+									"variable": [
+										{
+											"key": "courseid",
+											"value": "6124e21e5dd930793cfdb70f"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Upload assignment file",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "test",
+											"value": "6126a6f62191b211e4a03218",
+											"type": "text"
+										},
+										{
+											"key": "myFile",
+											"type": "file",
+											"src": "/C:/Users/chris/Desktop/Node-Course/2.1 PDF-Guide-Node-Andrew-Mead-v3.pdf"
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/teacher/:courseid/uploadassignment/:assignmentid",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"teacher",
+										":courseid",
+										"uploadassignment",
+										":assignmentid"
+									],
+									"variable": [
+										{
+											"key": "courseid",
+											"value": "6124e21e5dd930793cfdb70f"
+										},
+										{
+											"key": "assignmentid",
+											"value": "612a8539ea08ae53cccc1f41"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Assignments for course",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/teacher/:courseid/getassignments",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"teacher",
+										":courseid",
+										"getassignments"
+									],
+									"variable": [
+										{
+											"key": "courseid",
+											"value": "6124e21e5dd930793cfdb70f"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Assignment Attempts",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/teacher/:courseid/assignment/:assignmentid/getattempts",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"teacher",
+										":courseid",
+										"assignment",
+										":assignmentid",
+										"getattempts"
+									],
+									"variable": [
+										{
+											"key": "courseid",
+											"value": "6124e21e5dd930793cfdb70f"
+										},
+										{
+											"key": "assignmentid",
+											"value": "612c7dc7166eb4fa2467057a"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete assignment from course",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/teacher/:courseid/deleteassignment/:assignmentid",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"teacher",
+										":courseid",
+										"deleteassignment",
+										":assignmentid"
+									],
+									"variable": [
+										{
+											"key": "courseid",
+											"value": "6124e21e5dd930793cfdb70f"
+										},
+										{
+											"key": "assignmentid",
+											"value": "612bef8245c97cb848c7ddfa"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Download Asssignment",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/teacher/:courseid/assignments/:assignmentid",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"teacher",
+										":courseid",
+										"assignments",
+										":assignmentid"
+									],
+									"variable": [
+										{
+											"key": "courseid",
+											"value": "6124e21e5dd930793cfdb70f"
+										},
+										{
+											"key": "assignmentid",
+											"value": "612b74921b75e8e54ce631a1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Course",
+					"item": [
+						{
+							"name": "Create Course",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"coursename\": \"first course\",\r\n    \"description\": \"About first course\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/teacher/createcourse",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"teacher",
+										"createcourse"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Student to Course",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"mathewamgad1@gmail.com\",\r\n    \"course_id\":\"6124e21e5dd930793cfdb70f\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/teacher/addstudent",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"teacher",
+										"addstudent"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Remove Student from Course",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"mathewamgad1@gmail.com\",\r\n    \"course_id\":\"6124e21e5dd930793cfdb70f\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/teacher/removestudent",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"teacher",
+										"removestudent"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Students List in Course",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/teacher/:courseid/getstudentslist",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"teacher",
+										":courseid",
+										"getstudentslist"
+									],
+									"variable": [
+										{
+											"key": "courseid",
+											"value": "6124e21e5dd930793cfdb70f"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Courses",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/teacher/getmycourses",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"teacher",
+										"getmycourses"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get my course by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/teacher/getmycourse/6120059d81dd19dfb8d30af7",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"teacher",
+										"getmycourse",
+										"6120059d81dd19dfb8d30af7"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Remove Course by ID",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/teacher/removecourse/612009b40f8ef54580f15570",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"teacher",
+										"removecourse",
+										"612009b40f8ef54580f15570"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Courses",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"courses\":[\r\n        {\r\n            \"studentsList\": [],\r\n            \"assignments\": [],\r\n            \"_id\": \"6124d6838c58f627c0713186\",\r\n            \"name\": \"testtttttttttttt\",\r\n            \"instructor\": \"6123c7f929c77d393cffdb99\",\r\n            \"__v\": 0\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/teacher/updatecourses",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"teacher",
+										"updatecourses"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Common Routes Teachers&Students",
+			"item": [
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"if(pm.response.code === 200){\r",
+									"    pm.environment.set('authToken', pm.response.json().token)\r",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"chrisamgad@gmail.com\",\r\n    \"password\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/myprofile",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"myprofile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/logout",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Download Attempt",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/student/:studentid/:courseid/assignments/:assignmentid/downloadattempt",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"student",
+								":studentid",
+								":courseid",
+								"assignments",
+								":assignmentid",
+								"downloadattempt"
+							],
+							"variable": [
+								{
+									"key": "studentid",
+									"value": "612bf09ca5c4edf46c762b42"
+								},
+								{
+									"key": "courseid",
+									"value": "6124e21e5dd930793cfdb70f"
+								},
+								{
+									"key": "assignmentid",
+									"value": "612c7dc7166eb4fa2467057a"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Students",
+			"item": [
+				{
+					"name": "Assignment Attempt",
+					"item": [
+						{
+							"name": "Get Assignmets for student",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/student/:courseid/getassignments",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"student",
+										":courseid",
+										"getassignments"
+									],
+									"variable": [
+										{
+											"key": "courseid",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Submit Assignment Attempt",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "myFile",
+											"type": "file",
+											"src": "/C:/Users/chris/Desktop/Node-Course/2.1 PDF-Guide-Node-Andrew-Mead-v3.pdf"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/student/:courseid/submitassignment/:assignmentid",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"student",
+										":courseid",
+										"submitassignment",
+										":assignmentid"
+									],
+									"variable": [
+										{
+											"key": "courseid",
+											"value": "6124e21e5dd930793cfdb70f"
+										},
+										{
+											"key": "assignmentid",
+											"value": "612c7dc7166eb4fa2467057a"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Attempt For Student",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/student/:courseid/getattempt/:assignmentid",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"student",
+										":courseid",
+										"getattempt",
+										":assignmentid"
+									],
+									"variable": [
+										{
+											"key": "courseid",
+											"value": "6124e21e5dd930793cfdb70f"
+										},
+										{
+											"key": "assignmentid",
+											"value": "612c7dc7166eb4fa2467057a"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Student Sign Up",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"if(pm.response.code === 200){\r",
+									"    pm.environment.set('authToken', pm.response.json().token)\r",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullname\":\"Chris Amgad\",\r\n    \"email\":\"chrisamgad@gmail.com\",\r\n    \"password\": \"123\",\r\n    \"mobilenumber\":1276061606 ,\r\n    \"role\":\"student\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/signup",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Courses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/student/getmycourses",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"student",
+								"getmycourses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload Avatar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "upload",
+									"type": "file",
+									"src": "/C:/Users/chris/Desktop/Node-Course/MongoDB/task-manager/node-course-images/profile-pic.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/uploadavatar",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"uploadavatar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Teacher Sign Up",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if(pm.response.code === 200){\r",
+							"    pm.environment.set('authToken', pm.response.json().token)\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fullname\":\"VIVIAN Anwar \",\r\n    \"email\":\"viviananwar1@gmail.com\",\r\n    \"password\": \"123\",\r\n    \"mobilenumber\":123456789 ,\r\n    \"role\":\"teacher\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/teacher-signup",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"teacher-signup"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{authToken}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

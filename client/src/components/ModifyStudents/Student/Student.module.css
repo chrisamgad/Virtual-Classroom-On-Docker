@@ -1,0 +1,14 @@
+.cardcontainer{
+    text-align: center;
+
+}
+
+.cardsubcontainer{
+    width: 40%;
+    border-radius: .5rem;
+    margin-top: 15px;
+}
+.email{
+    color: #0088ff;
+}
+

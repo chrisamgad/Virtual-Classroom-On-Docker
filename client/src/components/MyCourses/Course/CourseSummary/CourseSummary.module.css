@@ -1,0 +1,26 @@
+.nav{
+    display: flex;
+    justify-content: center;
+    background: #f8f8f8;
+    margin-top: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.nav_link{
+    font-size: 1.1rem;
+
+}
+.nav_link:hover{
+    color:#31af36 !important;
+}
+.nav_link_active{
+    font-size: 1.1rem;
+    color:#0088ff  !important;
+}
+.nav_link_active:hover{
+    color:#31af36  !important;
+}
+.border{
+    
+    border-left:1px solid #33372145;
+}

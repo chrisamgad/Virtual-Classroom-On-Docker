@@ -1,0 +1,28 @@
+.header{
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.heading{
+    font-size: 26px;
+    font-weight: 300;
+    color: #000000;
+    width: 10.5%;
+    margin-left: 37px;
+    margin-bottom: 12px;
+}
+
+.AddAssignmentButton{
+    position: absolute;
+    right: 223px;
+    top: 20px;
+}
+.DeleteAssignmentButton{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.assignmentscontainer{
+    margin-left: 35px;
+}

@@ -1,0 +1,46 @@
+.FormContainer{
+    width: 40%;
+    position: absolute;
+    right: 326px;
+    background-color: #ffffff;
+    padding: 40px !important;
+    padding-top: 20px !important;
+    padding-bottom: 50px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 15px;
+    border: 1px solid #31af36;
+    z-index: 101;
+}
+
+.windowclose{
+    font-weight: 500;
+    font-size: 25px;
+    color: #31af36;
+    text-align: right;
+}
+.CREATE_AN_ASSIGNMENT_p
+{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.buttonscontainer{
+    display:flex;
+    justify-content: center;
+    margin-top: 10px;
+
+}
+
+.buttonstyle{
+    margin-left: 15px;
+    margin-right: 15px
+}
+
+.alertStyle{
+    padding: 10px 1rem !important;
+    margin-top:20px !important;
+    margin-bottom: 0 !important;
+}

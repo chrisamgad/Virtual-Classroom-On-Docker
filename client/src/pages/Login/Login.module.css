@@ -1,0 +1,35 @@
+.form_container{
+    padding-top:70px !important;
+    padding-bottom: 70px !important;
+    display:flex;
+    background: #c4d3ce4d;
+    justify-content:center;
+    border-radius: 15px;
+    
+}
+
+.form_styles{
+    padding:40px 40px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    border: 1px solid gray;
+}
+
+.form_styles p:first-child{
+    font-weight: 400;
+    font-size: 17px;
+}
+
+.form_styles p:last-child{
+    margin-top:16px;
+}
+
+.create_account{
+   text-decoration: none;
+    font-size: 15px;
+}
+
+.alertStyle{
+    padding: 10px 1rem !important;
+    margin-top:15px !important;
+}

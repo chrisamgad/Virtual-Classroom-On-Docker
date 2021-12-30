@@ -1,0 +1,47 @@
+.heading{
+    font-size: 26px;
+    color: #000000;
+    font-weight: 500;
+    background: linear-gradient(45deg, #31af36, transparent);
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    margin-bottom: 0;
+}
+.totalNStudents{
+    margin-left: 32px;
+    margin-bottom: 0;
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 17px;
+    color: #0088ff;
+}
+.StudentsContainer{
+    margin-top:2px;
+    margin-left:10px;
+    margin-bottom: 10px;;
+}
+
+.showmorecontainer{
+    display: flex;
+    color: #212326d6;
+    background: #f8f8f8;
+    margin-left: 30px;
+    border: 1px solid #c0c0c0;
+    justify-content: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    -webkit-transition: all 0.1s ease-in;
+    -moz-transition: all 0.1s ease-in;
+    -o-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;
+    
+}
+.showmorecontainer:hover{
+    background-color: #e1dede;
+    cursor: pointer;
+    color: black ;
+}

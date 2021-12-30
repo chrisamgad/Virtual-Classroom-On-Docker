@@ -1,0 +1,45 @@
+.Card{
+    background-color: #ffffff ;
+    border:2px solid #ffffff !important;
+    color: black ;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+.Card:hover{
+    background-color: #4f4c4c !important;
+    border:2px solid #dc3545 !important;
+    color:white;
+    border-bottom: 2px solid #4f4c4c !important;
+  
+
+}
+.cardcontainer{
+    margin-bottom: 20px !important;
+    width: 20rem !important;
+}
+
+.Submitted{
+    background-color: #198754 !important;
+    margin-bottom: 10px;
+}
+
+.Deadline_Passed{
+    background-color: #dc3545;
+    margin-bottom: 10px;
+}
+
+.assignmentdownloadlink{
+    display: inline-block;
+    border-right:1px solid rgba(0,0,0,.125) ;
+    border-radius: 0 0 !important;
+    color: #0088ff;
+}
+
+.assignmentdownloadlink:hover{
+    color: #ffffff;
+    background-color: #0088ff;
+    cursor: pointer;
+}

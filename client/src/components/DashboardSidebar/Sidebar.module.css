@@ -1,0 +1,42 @@
+.NavContainer{
+    background: #f8f8f8;  /* fallback for old browsers */
+    display: block !important;
+    overflow: hidden;
+    /* display:flex !important;
+    align-items: center !important ;
+    justify-content: center !important;
+    width:100%; */
+    /*border-radius: 5px;*/
+}
+
+.NavLink{
+
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    width: 100%;
+   /* background-color: red; */
+}
+
+.NavLink:hover{
+
+   
+    background-color: #31af36; 
+    color:white !important;
+}
+
+.brand{
+    display: block !important;
+    margin: 0 auto !important;
+    margin-top: 22px !important;
+    margin-bottom: 22px !important;
+    border: 3px solid #31af36;
+    border-radius: 20px;
+}
+
+.onClickLinkStyle{
+    background-color: #0088ff !important;
+    color:white !important;
+    /* border:1px solid #31af36; */
+}

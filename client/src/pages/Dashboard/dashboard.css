@@ -1,0 +1,18 @@
+.SidebarContainer{
+    padding:0 !important;
+}
+
+.DashboardContainer{
+    padding:0 !important;
+    background-color: #cbc9c945; 
+    padding:0;
+    padding-top: 15px;
+    /* overflow:hidden; */
+    position:relative;
+}
+
+.card{
+    display:inline-block !important;
+    flex-direction:unset;
+}
+

@@ -1,0 +1,26 @@
+version: '2'
+
+services:
+  mongo_database_by_chris: 
+      image: 'mongo'
+      volumes:
+        - ./mongodb-data:/data/db
+      ports:
+        - 27017:27017
+  backend:
+      build:
+        context: ./backend
+        dockerfile: ./Dockerfile
+      image: "backend_end_virtual_classroom"
+      ports:
+        - "4000:4000"
+      depends_on: #IMPORTANT
+        - mongo_database_by_chris #In the backend, in mongoose.js, we will replace mongoose.connect("mongodb://localhost:27017/virtualclassroom, ..) with mongoose.connect("mongodb://mongo_database_by_chris:27017/virtualclassroom, ..)
+  frontend:
+    build:
+      context: ./client
+      dockerfile: ./Dockerfile
+    image: "front_end_virtual_classroom"
+    ports:
+      - "3000:3000"
+

@@ -1,0 +1,57 @@
+.cardcontainer{
+    margin: 10px 34px;    
+    border: 2px solid white !important ;
+    border-radius: 12px !important; 
+    padding-right: 25px; 
+    /* border-left: 2px solid #0088ff !important;   */
+    /* transition:width 4s linear 4s !important ; */
+    -webkit-transition: all 0.2s ease-in;
+-moz-transition: all 0.2s ease-in;
+-o-transition: all 0.2s ease-in;
+transition: all 0.2s ease-in;
+}
+
+.cardcontainer:hover{
+    cursor:pointer;
+    /* padding-right: 100px !important; */
+    border:2px solid #0088ff !important;
+    /* border-left: 2px solid #0088ff !important;   */
+}
+
+.cardcontainerwithDelete{
+    margin: 10px 34px;    
+    border: 2px solid white !important ;
+    border-radius: 12px !important; 
+    padding-right: 25px; 
+    border:2px solid #dc3545 !important;
+    /* border-left: 2px solid #0088ff !important;   */
+    /* transition:width 4s linear 4s !important ; */
+}
+
+.cardbody{
+    padding: 1.6rem 1rem !important;
+    margin-left: 10px;
+    position:relative;
+
+}
+.delete{
+    color: red;
+    font-size: 20px;
+    position: absolute;
+    top: 13px;
+    right: 0;
+
+    -webkit-transition: all 0.1s ease-in;
+    -moz-transition: all 0.1s ease-in;
+    -o-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;
+}
+
+
+.delete:hover{
+    cursor:pointer !important;
+    font-size:23px;
+}
+.card{
+    font-family: var(--bs-font-sans-serif) !important;
+}

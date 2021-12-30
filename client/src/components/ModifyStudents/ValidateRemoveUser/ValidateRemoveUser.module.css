@@ -1,0 +1,18 @@
+.Formcontainer{
+    width: 23%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    background-color: #ffffff;
+    border-radius: 20px;
+    border: 2px solid red;
+    z-index: 101;
+}
+
+.Formcontainer Button{
+    margin-left:10px;
+}

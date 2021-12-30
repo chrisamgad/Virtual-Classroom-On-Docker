@@ -1,0 +1,20 @@
+.FormContainer{
+    position: absolute;
+    right: 390px;
+    top: 130px;
+    background-color: #ffffff;
+    width: 370px;
+    padding: 20px !important;
+    padding-bottom: 20px !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 15px;
+    border: 1px solid red;
+    z-index: 101;
+}
+
+.buttonstyles{
+    margin-left:10px;
+    margin-right:10px;
+}
