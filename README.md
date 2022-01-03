@@ -1,7 +1,11 @@
 # Virtual-Classroom
+Note: You have must Docker installed
+
 ## How to run?
 1. Clone the project
-2. <i>npm install</i> the libraries
-3. Start Database: start connection to mongoDB (individual terminal)
-4. Start Backend: On a new terminal, go inside backend directory and enter <i>npm run dev</i> or <i>node src/index.js</i>
-5. Start Frontend: On a new terminal, go inside client directory and enter <i>npm start</i>
+2. On the root directory (In Virtual-Classroom directory), write the following commands
+
+      <i><b>docker-compose build</b></i> --> builds the docker-compose file <br>
+      <i><b>docker-compose up</b></i> --> start the containers <br>
+  
+3. Remember after finishing write <i>docker-compose down</i> to stop and removes any running containers,images and networks
