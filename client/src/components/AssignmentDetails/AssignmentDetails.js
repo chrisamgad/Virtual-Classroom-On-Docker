@@ -14,7 +14,7 @@ const AssignmentDetails = () => {
     const courseCtx=useContext(CourseContext)
     const [SelectedFile,setSelectedFile]=useState(undefined)
     const [SubmitSuccess,setSubmitSuccess]=useState(false)
-    const [AlreadySubmitted,setAlreadySubmitted]=useState(false)
+    const [AlreadySubmitted,setAlreadySubmitted]=useState(undefined)
     const [attempts,setattempts]=useState([])
     const [students_with_no_attempt,setstudents_with_no_attempt] =useState([])
     useEffect(()=>{
@@ -31,7 +31,7 @@ const AssignmentDetails = () => {
                 setstudents_with_no_attempt(res.data.studentsWhoDidntAttempt)   
             })
         courseCtx.SetWentInsideCourse(true)
-    },[])
+    },[AlreadySubmitted])
     
     const SubmitAttempt = () =>{
         const data=new FormData()
@@ -59,7 +59,7 @@ const AssignmentDetails = () => {
                         }>Download Submitted Attempt</p>
                 </div>
                 )
-            else{   
+            else if(AlreadySubmitted ===false){   
                 if(SubmitSuccess)
                     return (
                         <div className={styles.Submit_success_container}>
@@ -81,7 +81,10 @@ const AssignmentDetails = () => {
                         </div> 
                     )
                     }
-                }           
+                }  
+            else{ //If still loading 
+                return null
+            }         
         }
         else if (role === 'teacher')
         {
